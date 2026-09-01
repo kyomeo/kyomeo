@@ -18,7 +18,7 @@ reproducible bug reports.
 
 ## What I work on
 
-### 🧝 LOTRO Polish Translation Platform (public repository)
+### 🧝 lotro-translator.pl (public repository)
 
 [koniecdev/LotroKoniecDev](https://github.com/koniecdev/LotroKoniecDev) is a platform that brings
 Polish translations to *The Lord of the Rings Online*. I test the web application: account flows,

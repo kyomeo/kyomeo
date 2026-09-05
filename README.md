@@ -107,8 +107,7 @@ which is most of what a bug report is.
 
 ## Tools
 
-`GitHub Issues` · `Google Sheets` · `Google Drive` · `Chrome DevTools`  · `Excel` ·
-`Confluence` · `Markdown` · `Git (reading)`
+`GitHub Issues` · `Claude Code (AI-assisted testing)` · `Google Sheets` · `Excel` · `Confluence` · `Markdown` · `Git (reading)`
 
 ---
 

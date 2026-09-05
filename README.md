@@ -81,7 +81,7 @@ I do not just tick checkboxes. I document a run so that someone else can repeat 
   happened, evidence, linked bug. Screenshots go straight into the comment, so a result and its
   proof never live in separate places. Pass rate is calculated from executed steps only, so blocked
   and not-run steps never inflate it.
-  - **I work with an AI assistant, and nothing it writes goes out unread.** I dictate a run in plain
+- **I work with an AI assistant, and nothing it writes goes out unread.** I dictate a run in plain
   language and it assembles the report; evidence goes straight into the comment. Figures are checked
   against the repository before anything is posted, and the pass or fail verdict stays mine. A report
   that reads well and counts wrong is worse than no report at all.

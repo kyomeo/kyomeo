@@ -4,15 +4,15 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Manual_QA-Web-2E7D32?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Bug_Reporting-GitHub_Issues-181717?style=for-the-badge&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/badge/Test_Runs-Google_Sheets-0F9D58?style=for-the-badge&logo=googlesheets&logoColor=white" />
+  <img src="https://img.shields.io/badge/Root_Cause-Analysis-B45309?style=for-the-badge" />
   <img src="https://img.shields.io/badge/DevTools-Chrome-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" />
 </p>
 
-I test two commercial web products as a manual tester. I run test scenarios against a live staging
-environment from the browser, record every run in a structured sheet, and file what I find as
-reproducible bug reports.
+I test two commercial web products as a manual tester. I run test scenarios from the browser against
+staging and production, report every run as one structured comment under its ticket, and file what I
+find as reproducible bug reports.
 
-**20 issues filed. 10 of them public and clickable below. One merged pull request.**
+**36 issues filed, 19 already resolved. 10 of them public and clickable below. One merged pull request.**
 
 ---
 
@@ -34,7 +34,8 @@ and account flows, the listing forms, the user profile area and data-protection 
 repository is private, so nothing here is linkable; the findings below are described with the
 product owner's consent.
 
-**10 bugs filed in my first two days on the product.** Three I would open with:
+**26 issues filed, 9 already fixed. Five QA tickets executed, on staging and on the live site.**
+Three findings I would open with:
 
 - **A cat's age was entered in years and stored as months.** Typing `3` created a cat born three
   months ago. The form accepted it, the record looked fine, and the data was quietly wrong.
@@ -42,6 +43,8 @@ product owner's consent.
   out looking complete while holding something nobody had chosen.
 - **After sign-up through an external identity provider, the application-side profile was never
   created.** The consent record stayed empty and the GDPR data export came back with nothing in it.
+  I traced it back to its cause: nothing sent a new account to the onboarding form, and that form is
+  what creates the profile. Filing the cause as its own report closed both tickets.
 
 ---
 
@@ -74,14 +77,20 @@ documentation and code are resolved across the whole repository.
 
 I do not just tick checkboxes. I document a run so that someone else can repeat it.
 
-- **Every run has its own sheet.** Test id, scenario, preconditions, steps, expected result, actual
-  result, status, environment, evidence, linked bug. Pass rate is calculated from executed steps
-  only, so blocked and not-run steps never inflate it.
+- **Every run is one comment under its ticket.** Test id, status, environment, what actually
+  happened, evidence, linked bug. Screenshots go straight into the comment, so a result and its
+  proof never live in separate places. Pass rate is calculated from executed steps only, so blocked
+  and not-run steps never inflate it.
 - **Statuses mean different things.** `FAILED` is a result: information obtained. `BLOCKED` is the
   absence of a result, and it keeps a run open until the missing precondition is delivered.
 - **Evidence is mandatory where it matters.** Any step that consumes its own preconditions, such as
   an import, a deletion or a status change, gets a screenshot even when it passes. Tomorrow there is
   no way to show what it looked like before.
+- **I look for the cause, not only the symptom.** Four unrelated broken screens on one product came
+  down to a single missing redirect after sign-up. Reporting that cause closed the tickets that
+  described the symptoms.
+- **Severity and priority are two different questions.** How badly it hurts the user is my call and
+  I rate it on every report. How soon it gets fixed belongs to the product owner.
 - **One bug is one report.** Reproducible, with steps, environment, expected vs actual, and evidence.
 - **I write test scenarios, not only execute them.** Example:
   [#725, game version number rules, list order and status-based delete](https://github.com/koniecdev/LotroKoniecDev/issues/725).
@@ -98,7 +107,8 @@ which is most of what a bug report is.
 
 ## Tools
 
-`GitHub Issues` · `Google Sheets` · `Google Drive` · `Chrome DevTools` · `Markdown` · `Git (reading)`
+`GitHub Issues` · `Google Sheets` · `Google Drive` · `Chrome DevTools`  · `Excel` ·
+`Confluence` · `Markdown` · `Git (reading)`
 
 ---
 
